@@ -15,7 +15,7 @@
 
 ## Estrutura do Sistema
 
-Este sistema de monitoramento de site foi desenvolvido para JBOSS 4.0.5GA, Java 8 e SQL Server, conforme solicitado. Ele permite monitorar URLs mais acessadas, IPs, nomes de usuários, geolocalização e logs detalhados.
+Este sistema de monitoramento de site foi desenvolvido para JBOSS 4.0.5GA, Java 8 e SQL Server. Ele permite monitorar URLs mais acessadas, IPs, nomes de usuários, geolocalização e logs detalhados.
 
 ### Componentes Principais
 
