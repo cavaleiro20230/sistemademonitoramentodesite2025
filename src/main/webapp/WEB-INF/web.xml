@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+
+    <display-name>Sistema de Monitoramento de Site</display-name>
+
+    <!-- Filtro para capturar todas as requisições HTTP -->
+    <filter>
+        <filter-name>RequestLogFilter</filter-name>
+        <filter-class>com.monitor.filter.RequestLogFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>RequestLogFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- Servlet para exibir o painel de monitoramento -->
+    <servlet>
+        <servlet-name>MonitorServlet</servlet-name>
+        <servlet-class>com.monitor.servlet.MonitorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MonitorServlet</servlet-name>
+        <url-pattern>/monitor</url-pattern>
+    </servlet-mapping>
+
+    <!-- Página inicial -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
